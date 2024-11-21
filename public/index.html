@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Mi Proyecto Webpack</title>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+</head>
+
+<body class="bg-white dark:bg-zinc-950">
+
+  <div class="bg-white ">
+    <header class="absolute inset-x-0 top-0 z-50 dark:bg-zinc-900">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Open main menu</span>
+
+          </button>
+        </div>
+        <div class=" lg:flex lg:gap-x-12">
+          <a id="array_lesson" href="#"
+            class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-400 mr-4">Arrays</a>
+          <a id="hash_table_lesson" href="#"
+            class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-400 mr-4">Hash Tables</a>
+          <a id="linked_list_lesson" href="#"
+            class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-400 mr-4">Linked List</a>
+          <a id="double_linked_list_lesson" href="#"
+            class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-400 mr-4">Double Linked List</a>
+        </div>
+
+      </nav>
+
+    </header>
+
+    <div id="app"></div>
+
+    <script src="./dist/bundle.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+   
+
+    <script lang="js">
+      //js
+      new ClipboardJS('.code');
+
+
+      const boxes = document.querySelectorAll('.box');
+
+      boxes.forEach(box => {
+        box.addEventListener('click', function handleClick(event) {
+          console.log('box clicked', event);
+
+          box.setAttribute('style', 'background-color: yellow;');
+        });
+      });
+
+    </script>
+</body>
+
+</html>
